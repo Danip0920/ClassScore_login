@@ -1,0 +1,160 @@
+/* HEADER */
+.app-header {
+  background-color: #1E3A8A; 
+  color: #FFFFFF;
+  padding: 12px 24px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* 3 columnas */
+  align-items: center;
+  width: 100%;          /* ocupa todo el ancho */
+  box-sizing: border-box;
+  position: relative;   /* asegura que no se centre */
+}
+
+.app-header .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.app-header img {
+  grid-column: 1;
+  justify-self: start; 
+  height: 40px;
+}
+
+.app-header h1 {
+  grid-column: 2;
+  font-size: 20px;
+  margin: 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Ajuste para que el login no quede pegado al header */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #F3F4F6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-container {
+  margin-top: 40px; /* espacio debajo del header */
+  display: flex;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 750px;
+  max-width: 95%;
+}
+
+
+/* Columna izquierda */
+.login-left {
+  flex: 1; /* Que ocupe el espacio disponible */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F3F4F6; /* opcional, un gris claro de fondo */
+  border-radius: 10px 0 0 10px; /* bordes redondeados si quieres */
+  overflow: hidden; /* evita que se desborde */
+}
+
+.login-left img {
+  max-width: 90%;
+  height: auto;
+}
+
+/* Columna derecha */
+.login-right {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-right h2 {
+  color: #1E3A8A; /* azul marino */
+  margin-bottom: 8px;
+  font-size: 24px;
+}
+
+.login-right p {
+  color: #6B7280;
+  margin-bottom: 24px;
+}
+
+.login-right label {
+  font-weight: bold;
+  color: #1E3A8A;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.login-right input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #D1D5DB;
+  border-radius: 8px;
+  background-color: #F9FAFB;
+}
+
+.login-right input:focus {
+  outline: none;
+  border-color: #3B82F6; /* azul claro */
+  box-shadow: 0 0 4px rgba(59, 130, 246, 0.4);
+}
+
+/* Botones */
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.btn-primary {
+  background-color: #1E3A8A;
+  color: #FFFFFF;
+  margin-bottom: 12px;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #3B82F6;
+}
+
+/* Link "Olvidaste tu contraseña" */
+.forgot-password {
+  display: block;
+  margin: 10px 0;
+  font-size: 14px;
+  color: #1d2f7b;
+  text-decoration: none;
+  text-align: center;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .login-left {
+    display: none; /* en móviles ocultamos la ilustración */
+  }
+}
